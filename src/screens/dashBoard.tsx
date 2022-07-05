@@ -17,6 +17,7 @@ export const DashBoard = () => {
       style={dashBoardStyles.container}
       data={gridData}
       renderItem={({item}) => <RenderItem item={item} />}
+      numColumns={2}
     />
   );
 };

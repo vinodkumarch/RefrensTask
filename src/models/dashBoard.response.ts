@@ -18,9 +18,9 @@ export interface UserProfile {
   type: string;
   gender: string;
   origin: UserInfo;
-  location: UserInfo;
+  location: LocationResponse;
   image: string;
-  episode: string[];
+  episode: EpisodeResponse;
   url: string;
   created: string;
 }
@@ -28,4 +28,18 @@ export interface UserProfile {
 export interface UserInfo {
   name: string;
   url: string;
+}
+
+export interface EpisodeResponse {
+  name: string;
+  air_date: string;
+  episode: string;
+  characters: string[];
+}
+
+export interface LocationResponse {
+  name: string;
+  type: string;
+  dimension: string;
+  residents: string[];
 }

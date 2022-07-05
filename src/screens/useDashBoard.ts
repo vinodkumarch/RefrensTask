@@ -10,10 +10,11 @@ export const useDashBoard = () => {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await getCharactersFromApi();
-      setGridData(data);
+      const characters = await getCharactersFromApi();
+      setGridData(characters);
     } catch (serviceError) {
       setError(serviceError);
+      console.log(serviceError);
     } finally {
       setLoading(false);
     }

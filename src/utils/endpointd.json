@@ -1,6 +1,0 @@
-{
-  "CHARACTERS" : {
-    "endpoint": "character",
-    "method": "GET"
-  }
-}
