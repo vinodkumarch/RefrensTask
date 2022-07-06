@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {Text, View} from 'react-native';
-import {renderItemStyles} from '../components/renderItem.styles';
-import {useDetailsScreen} from './useDetailsScreen';
+import {CharacterItemStyles} from '../components/characterItem.styles';
+import {useCharacterDetails} from './useCharacterDetails';
 
-export const DetailsScreen = () => {
+export const CharacterDetails = () => {
   const {
     dimensions,
     episodeDate,
@@ -17,10 +17,10 @@ export const DetailsScreen = () => {
     origin,
     species,
     status,
-  } = useDetailsScreen();
+  } = useCharacterDetails();
   return (
-    <View style={renderItemStyles.subContainer}>
-      <Text style={renderItemStyles.titleTextContainer}>{name}</Text>
+    <View style={CharacterItemStyles.subContainer}>
+      <Text style={CharacterItemStyles.titleTextContainer}>{name}</Text>
       <Text>{gender}</Text>
       <Text>{status}</Text>
       <Text>{species}</Text>

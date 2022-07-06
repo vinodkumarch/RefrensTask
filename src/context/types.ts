@@ -1,6 +1,6 @@
-import {DashBoard} from '../models/dashBoard';
+import {Character} from '../models/character';
 
 export type CharactersContextState = {
-  characters: DashBoard;
-  setCharacters: (name: DashBoard) => void;
+  characters: Character;
+  setCharacters: (name: Character) => void;
 };

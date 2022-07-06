@@ -1,23 +1,23 @@
-export interface DashBoardResponse {
-  info: DashBoardInfo;
-  results: UserProfile[];
+export interface CharacterResponse {
+  info: CharacterInfo;
+  results: CharacterProfile[];
 }
 
-export interface DashBoardInfo {
+export interface CharacterInfo {
   count: number;
   pages: number;
   next: string;
   prev: null;
 }
 
-export interface UserProfile {
+export interface CharacterProfile {
   id: number;
   name: string;
   status: string;
   species: string;
   type: string;
   gender: string;
-  origin: UserInfo;
+  origin: CharacterOrigin;
   location: LocationResponse;
   image: string;
   episode: EpisodeResponse;
@@ -25,7 +25,7 @@ export interface UserProfile {
   created: string;
 }
 
-export interface UserInfo {
+export interface CharacterOrigin {
   name: string;
   url: string;
 }

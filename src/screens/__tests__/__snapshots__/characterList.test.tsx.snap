@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UT for DashBoard screen should reder the dashboard view 1`] = `
+exports[`UT for Character screen should reder the Character List 1`] = `
 <RCTScrollView
   data={Array []}
   getItem={[Function]}
@@ -23,7 +23,7 @@ exports[`UT for DashBoard screen should reder the dashboard view 1`] = `
       "marginTop": 20,
     }
   }
-  testID="dashBoard.mainContainer"
+  testID="characters.mainContainer"
   viewabilityConfigCallbackPairs={Array []}
 >
   <View />

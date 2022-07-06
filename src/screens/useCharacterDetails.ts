@@ -2,7 +2,7 @@ import {useContext} from 'react';
 import {CharactersContext} from '../context';
 import {CharacterDetails} from '../utils/constants';
 
-export const useDetailsScreen = () => {
+export const useCharacterDetails = () => {
   const {characters} = useContext(CharactersContext);
 
   const dimensions = `${CharacterDetails.dimensions} - ${characters.location.dimension}`;

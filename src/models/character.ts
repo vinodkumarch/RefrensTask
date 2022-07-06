@@ -1,4 +1,4 @@
-export interface DashBoard {
+export interface Character {
   gender: string;
   image: string;
   name: string;

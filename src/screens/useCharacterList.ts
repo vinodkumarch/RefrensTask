@@ -1,14 +1,14 @@
 import {useCallback, useContext, useEffect, useState} from 'react';
-import {DashboardScreenProps, Screen} from '../navigation/screens';
-import {DashBoard} from '../models/dashBoard';
-import {getCharactersFromApi} from '../services/dashBoard.service';
+import {CharacterScreenProps, Screen} from '../navigation/screens';
+import {Character} from '../models/character';
+import {getCharactersFromApi} from '../services/character.service';
 import {useNavigation} from '@react-navigation/native';
 import {CharactersContext} from '../context';
 
-export const useDashBoard = () => {
-  const navigation = useNavigation<DashboardScreenProps>();
+export const useCharacterList = () => {
+  const navigation = useNavigation<CharacterScreenProps>();
   const {setCharacters} = useContext(CharactersContext);
-  const [gridData, setGridData] = useState<DashBoard[]>([]);
+  const [charactersData, setCharactersData] = useState<Character[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<unknown>();
 
@@ -16,18 +16,18 @@ export const useDashBoard = () => {
     setLoading(true);
     try {
       const characters = await getCharactersFromApi();
-      setGridData(characters);
+      setCharactersData(characters);
     } catch (serviceError) {
       setError(serviceError);
       console.log(serviceError);
     } finally {
       setLoading(false);
     }
-  }, [setGridData, setLoading, setError]);
+  }, [setCharactersData, setLoading, setError]);
 
-  const onUserProfilePress = (index: number) => {
-    setCharacters(gridData[index]);
-    navigation.navigate(Screen.DETAILS);
+  const onCharacterProfilePress = (index: number) => {
+    setCharacters(charactersData[index]);
+    navigation.navigate(Screen.CHARACTER_DETAILS);
   };
 
   useEffect(() => {
@@ -36,8 +36,8 @@ export const useDashBoard = () => {
 
   return {
     error, // used to show error alert design if api fails
-    gridData,
+    charactersData,
     loading,
-    onUserProfilePress,
+    onCharacterProfilePress,
   };
 };

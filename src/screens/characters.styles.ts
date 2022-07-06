@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-export const dashBoardStyles = StyleSheet.create({
+export const CharacterStyles = StyleSheet.create({
   container: {
     flexGrow: 1,
     marginTop: 20,

@@ -1,15 +1,15 @@
-import {DashBoard} from '../models/dashBoard';
+import {Character} from '../models/character';
 import {
-  DashBoardResponse,
+  CharacterResponse,
   EpisodeResponse,
   LocationResponse,
-} from '../models/dashBoard.response';
+} from '../models/character.response';
 import {endPoints} from '../utils/endpointd';
 
 import {fetchData} from './serviceConfig';
 
-export const getCharactersFromApi = async (): Promise<DashBoard[]> => {
-  const fetchCharacters: DashBoardResponse = await fetchData(
+export const getCharactersFromApi = async (): Promise<Character[]> => {
+  const fetchCharacters: CharacterResponse = await fetchData(
     endPoints.CHARACTERS,
   );
   const fetchLocation: LocationResponse[] = await fetchData(
@@ -35,7 +35,7 @@ export const getCharactersFromApi = async (): Promise<DashBoard[]> => {
     },
   }));
 
-  const transformedResponse: DashBoard[] = userData.map(serverModel => {
+  const transformedResponse: Character[] = userData.map(serverModel => {
     return {
       gender: serverModel.gender,
       image: serverModel.image,

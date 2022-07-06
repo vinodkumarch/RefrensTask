@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react';
-import {DashBoard} from '../models/dashBoard';
+import {Character} from '../models/character';
 import {CharactersContextState} from './types';
 
 const contextDefaultValues: CharactersContextState = {
@@ -34,11 +34,11 @@ export const CharactersContext =
   createContext<CharactersContextState>(contextDefaultValues);
 
 const CharactersProvider = ({children}: Props) => {
-  const [characters, setcharacters] = useState<DashBoard>(
+  const [characters, setcharacters] = useState<Character>(
     contextDefaultValues.characters,
   );
 
-  const setCharacters = (character: DashBoard) => setcharacters({...character});
+  const setCharacters = (character: Character) => setcharacters({...character});
 
   return (
     <CharactersContext.Provider

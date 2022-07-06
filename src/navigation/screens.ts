@@ -1,20 +1,20 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 export enum Screen {
-  DASHBOARD = 'DASHBOARD',
-  DETAILS = 'DETAILS',
+  CHARACTER = 'CHARACTER',
+  CHARACTER_DETAILS = 'CHARACTER DETAILS',
 }
 
 export type NavStackParams = {
-  [Screen.DASHBOARD]: undefined;
-  [Screen.DETAILS]: undefined;
+  [Screen.CHARACTER]: undefined;
+  [Screen.CHARACTER_DETAILS]: undefined;
 };
 
-export type DashboardScreenProps = NativeStackScreenProps<
+export type CharacterScreenProps = NativeStackScreenProps<
   NavStackParams,
-  Screen.DASHBOARD
+  Screen.CHARACTER
 >;
-export type DetailsScrenProps = NativeStackScreenProps<
+export type CharacterDetailsScrenProps = NativeStackScreenProps<
   NavStackParams,
-  Screen.DETAILS
+  Screen.CHARACTER_DETAILS
 >;

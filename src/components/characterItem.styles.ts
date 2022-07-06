@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-export const renderItemStyles = StyleSheet.create({
+export const CharacterItemStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
