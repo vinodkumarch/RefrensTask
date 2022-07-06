@@ -1,6 +1,8 @@
 import {Character} from '../models/character';
 import {CharacterProfile} from '../models/character.response';
 
+//takes the input from server response model and return the UI model which is actually required.
+
 export const transformedResponse = (
   serverModel: CharacterProfile[],
 ): Character[] => {

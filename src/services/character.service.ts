@@ -24,6 +24,8 @@ export const getCharactersFromApi = async (): Promise<Character[]> => {
     return episodes.results;
   });
 
+  //combine all the characters, episodes, and Locations api responses in to a sinle model and send to transformer to get the modifiefd UI Model.
+
   const userData = fetchCharacters.results.map((character, index) => ({
     ...character,
     ...{
