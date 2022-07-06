@@ -1,6 +1,6 @@
 # RefrensTask
 
-Clone the project
+Clone the project using link : https://github.com/vinodkumarch/RefrensTask.git
 
 Run --> iOS
 
