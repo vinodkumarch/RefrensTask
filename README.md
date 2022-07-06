@@ -2,20 +2,23 @@
 
 Clone the project using link : https://github.com/vinodkumarch/RefrensTask.git
 
-Run --> iOS
+To Run in iOS -->
 
-yarn
-cd ios && pod install
-yarn ios
+1. yarn
 
-Run --> Android
+2. cd ios && pod install
 
-Set android local.Properties file with android sdk path
+3. yarn ios
 
-yarn android
+
+To Run in Android --> 
+
+1.Set android local.Properties file with android sdk path
+
+2. yarn android
+
 
 iOS and Android Recordings
-
 
 
 https://user-images.githubusercontent.com/46564790/177499775-a09596c4-378a-4c6a-9ef8-310e51ed5be6.mp4  
