@@ -5,11 +5,14 @@ import {renderItemStyles} from './renderItem.styles';
 
 interface RenderItemProps {
   item: DashBoard;
+  onUserProfilePress: () => void;
 }
 
-export const RenderItem = ({item}: RenderItemProps) => {
+export const RenderItem = ({item, onUserProfilePress}: RenderItemProps) => {
   return (
-    <TouchableOpacity style={renderItemStyles.container}>
+    <TouchableOpacity
+      style={renderItemStyles.container}
+      onPress={onUserProfilePress}>
       <Image
         source={{uri: item.image}}
         style={renderItemStyles.imageContainer}

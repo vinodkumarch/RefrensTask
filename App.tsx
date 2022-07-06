@@ -3,11 +3,14 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {StackNavigator} from './src/navigation/stackNavigator';
+import CharactersProvider from './src/context/charactersProvider';
 
 function App() {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <CharactersProvider>
+        <StackNavigator />
+      </CharactersProvider>
     </NavigationContainer>
   );
 }

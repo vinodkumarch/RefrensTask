@@ -5,7 +5,7 @@ import {dashBoardStyles} from './dashBoard.styles';
 import {useDashBoard} from './useDashBoard';
 
 export const DashBoard = () => {
-  const {gridData, loading} = useDashBoard();
+  const {gridData, loading, onUserProfilePress} = useDashBoard();
   return loading ? (
     <ActivityIndicator
       size={'large'}
@@ -16,7 +16,12 @@ export const DashBoard = () => {
       testID="dashBoard.mainContainer"
       style={dashBoardStyles.container}
       data={gridData}
-      renderItem={({item}) => <RenderItem item={item} />}
+      renderItem={({item, index}) => (
+        <RenderItem
+          item={item}
+          onUserProfilePress={() => onUserProfilePress(index)}
+        />
+      )}
       numColumns={2}
     />
   );
